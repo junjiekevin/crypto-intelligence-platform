@@ -1,8 +1,6 @@
 # General
 .env
-.env.example
 *.log
-docs
 
 # Python
 .venv/

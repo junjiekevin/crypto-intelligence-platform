@@ -44,7 +44,8 @@ services:
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
 volumes:
   postgres_data:
