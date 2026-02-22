@@ -14,12 +14,16 @@ logs:
 
 test:
 	@echo "Running tests..."
-	@# TODO: Add test commands for api and rag-service
+	@# For now, verify database tables exist
+	docker exec crypto-postgres psql -U postgres -d crypto_intel -c "\dt"
 
 clean:
 	docker-compose down -v
-	@# TODO: Add more clean logic
+
+migrate:
+	@echo "Running manual migrations..."
+	docker exec -i crypto-postgres psql -U postgres -d crypto_intel < api/src/main/resources/db/migration/V1__Initial_Schema.sql
 
 seed:
 	@echo "Seeding database..."
-	@# TODO: Link to Phase 1 seed script
+	docker exec -i crypto-postgres psql -U postgres -d crypto_intel < scripts/seed_db.sql
