@@ -1,0 +1,36 @@
+# General
+.env
+.env.example
+*.log
+docs
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Java
+.gradle/
+build/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Frontend (Node/React)
+node_modules/
+dist/
+.eslintcache
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+.docker/
