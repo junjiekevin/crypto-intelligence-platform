@@ -1,7 +1,7 @@
 # General
 .env
 *.log
-docs
+docs/
 .claude
 LIST.md
 
