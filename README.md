@@ -102,10 +102,11 @@ This project was designed to:
 
 **Technologies:**
 
-- Python  
-- LangChain  
-- FAISS / Chroma  
-- Pydantic (structured schema validation)  
+- Python 3.12+ 
+- LangChain v0.3 (Modern stack)
+- LangChain-OpenAI (GPT-4o / Emb-3-Small)
+- FAISS (Vector Store)
+- Pydantic v2 (Strict Schema Validation)
 
 ---
 
@@ -249,10 +250,37 @@ git clone https://github.com/junjiekevin/crypto-intelligence-platform.git
 cd crypto-intelligence-platform
 ```
 
-### 2. Start services locally
+#### Prerequisites
+- **JDK 21** (Temurin recommended)
+- **Gradle 8.14+**
+- **Docker & Docker Compose**
+- **Python 3.12+** with `.venv`
 
+#### 1. Configure Environment
+Create a `.env` file from the example:
 ```bash
-docker-compose up --build
+cp .env.example .env
+# Add your OPENAI_API_KEY
+```
+
+#### 2. Start Infrastructure
+```bash
+docker-compose up -d postgres
+```
+
+#### 3. Run RAG Service
+```bash
+cd rag-service
+python -m venv .venv
+source .venv/bin/activate # or .venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
+```
+
+#### 4. Run Spring Boot API
+```bash
+cd api
+./gradlew bootRun
 ```
 
 ### 3. Access API

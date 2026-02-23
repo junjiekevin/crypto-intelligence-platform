@@ -1,6 +1,9 @@
 # General
 .env
 *.log
+docs
+.claude
+LIST.md
 
 # Python
 .venv/

@@ -6,13 +6,13 @@
 
 ## Last Updated
 
-**2026-02-21 19:52 EST**
+**2026-02-23 13:15 EST**
 
 ---
 
 ## Active Phase
 
-**Phase 2 — Spring Boot API Service (Core)** (READY TO START)
+**Phase 6 — Frontend Development** (READY TO START)
 
 ---
 
@@ -22,10 +22,10 @@
 |---|---|---|
 | Phase 0 — Scaffolding | ✅ Complete | Directory structure, .env, Docker, Makefile, .venv setup |
 | Phase 1 — Database | ✅ Complete | Schema designed, Flyway migrations created, docs updated |
-| Phase 2 — Spring Boot API | ⬜ Not Started | — |
-| Phase 3 — RAG Service | ⬜ Not Started | — |
-| Phase 4 — Risk Engine | ⬜ Not Started | — |
-| Phase 5 — Integration | ⬜ Not Started | — |
+| Phase 2 — Spring Boot API | ✅ Complete | Base API, entities, repos, and endpoints built |
+| Phase 3 — RAG Service | ✅ Complete | Modular RAG pipeline, FastAPI endpoint |
+| Phase 4 — Risk Engine | ✅ Complete | Java-based deterministic scoring engine |
+| Phase 5 — Integration | ✅ Complete | End-to-end API -> RAG -> Scoring flow |
 | Phase 6 — Frontend | ⬜ Not Started | — |
 | Phase 7 — Kubernetes | ⬜ Not Started | — |
 | Phase 8 — Production | ⬜ Not Started | — |
@@ -55,9 +55,9 @@
 | Component | Status | URL |
 |---|---|---|
 | PostgreSQL | ❌ Not provisioned | — |
-| Spring Boot API | 🟡 Placeholder built | — |
-| Python RAG Service | ✅ .venv hardened + deps installed | — |
-| Frontend | ❌ Not built | — |
+| Spring Boot API | ✅ Fully Integrated & Verified | http://localhost:8080 |
+| Python RAG Service | ✅ RAG Pipeline (LC v0.3) | http://localhost:8000 |
+| Frontend | ⬜ Planned (Vite/React) | — |
 | Docker Compose | ✅ Configured | — |
 | K8s Cluster | ❌ Not deployed | — |
 
@@ -72,7 +72,7 @@ _None at this time._
 ## Quick Context for New Engineers / LLM Agents
 
 1. **What is this project?** An AI-powered crypto tokenomics analysis platform. Upload a whitepaper → AI extracts structured tokenomics → deterministic risk scoring → persist and compare.
-2. **Tech stack:** Spring Boot (Java) + Python (LangChain/FastAPI) + PostgreSQL + Docker + Kubernetes.
-3. **Where to start:** Read `IMPLEMENTATION_PLAN.md` for the full roadmap. This file tells you what's currently in progress.
-4. **What exists right now:** Only `README.md` and `.gitignore`. The project is fully greenfield — no code has been written yet.
+2. **Tech stack:** Java 21 (Spring Boot) + Python 3.12 (LangChain 0.3/FastAPI) + PostgreSQL + Docker.
+3. **Current progress:** Core API, RAG Pipeline, and Risk Engine are fully integrated.
+4. **What exists right now:** Full backend services (`api/`, `rag-service/`), database migrations, and cross-service orchestration.
 5. **Next step:** Begin Phase 0 — create directory structure, Docker Compose, `.env.example`, and Makefile.

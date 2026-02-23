@@ -35,4 +35,4 @@ Before starting any work, always:
 
 ## 5. Mandatory Close Out 
 
-After completing phases, you must update `docs/CURRENT_STATE.md` and `docs/engineering_log.md` to reflect the changes made. 
+After completing phases, you must update `docs/CURRENT_STATE.md` and `docs/engineering_log.md` to reflect the changes made. docs folder should be in .gitignore, they are meant for local development purposes only. 
